@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="e1.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="failureRegisterForm">
+            <div class="title">Parts Validator</div>
+            <div class="form">
+                <div class="inputfield">
+                    <label for="air-filter">Air Filter Pressure</label>
+                    <input type="number" step="any" id="air-filter" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="brake-control">Brake Control</label>
+                    <input type="number" step="any" id="brake-control" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="exhaust-temp">Exhaust Gas Temperature</label>
+                    <input type="number" step="any" id="exhaust-temp" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="hydraulic-pump">Hydraulic Pump Rate</label>
+                    <input type="number" step="any" id="hydraulic-pump" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="fuel-level">Fuel Level</label>
+                    <input type="number" step="any" id="fuel-level" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="oil-pressure">Oil Pressure</label>
+                    <input type="number" step="any" id="oil-pressure" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="pedal-sensor">Pedal Sensor</label>
+                    <input type="number" step="any" id="pedal-sensor" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="speed">Speed</label>
+                    <input type="number" step="any" id="speed" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="system-voltage">System Voltage</label>
+                    <input type="number" step="any" id="system-voltage" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="engine-temp">Engine Temperature</label>
+                    <input type="number" step="any" id="engine-temp" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="transmission-pressure">Transmission Pressure</label>
+                    <input type="number" step="any" id="transmission-pressure" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <label for="water-in-fuel">Water in Fuel</label>
+                    <input type="number" step="any" id="water-in-fuel" class="input" required>
+                </div>
+                <div class="inputfield">
+                    <input type="submit" value="Validate Parts" id="submitButton" class="btn">
+                </div>
+            </div>
+        </form>
+        <div class="report" id="report"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

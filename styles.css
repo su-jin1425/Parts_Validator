@@ -1,0 +1,160 @@
+:root {
+  --primary-color: #FFCC00; /* Caterpillar Yellow */
+  --secondary-color: #F1C40F; /* Slightly darker yellow */
+  --accent-color: #333333; /* Black */
+  --background-color: #020000; /* black background */
+  --text-color: #333333; /* Black text for contrast */
+  --input-bg: #FFFFFF; /* White background for inputs */
+  --input-border: #CCCCCC; /* Light grey border for inputs */
+  --button-color: #FFCC00; /* Caterpillar Yellow */
+  --button-hover: #F1C40F; /* Slightly darker yellow for hover */
+  --success-color: #28A745; /* Green for success */
+  --error-color: #DC3545; /* Red for errors */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.form {
+  background: white;
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.inputfield {
+  position: relative;
+}
+
+.inputfield label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--input-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(203, 153, 126, 0.2);
+  outline: none;
+}
+
+.inputfield:last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 50%;
+  padding: 12px;
+  background: var(--button-color);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(132, 165, 157, 0.4);
+}
+
+.report {
+  display: none;
+  margin-top: 30px;
+  padding: clamp(20px, 4vw, 30px);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: var(--text-color);
+  white-space: pre-line;
+  border-left: 5px solid var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.report.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#failureRegisterForm {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@media (max-width: 600px) {
+  .form {
+      grid-template-columns: 1fr;
+  }
+  
+  .inputfield {
+      margin-bottom: 15px;
+  }
+
+  .btn {
+      width: 100%;
+  }
+}
